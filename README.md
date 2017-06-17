@@ -31,7 +31,7 @@ openstack_keystone_database:
 ```
 
 ## Dependencies
-None
+- [bbrfkr.openstack_mariadb](https://galaxy.ansible.com/bbrfkr/openstack_mariadb/)
 
 ## Build status
 |branch|status|
@@ -42,7 +42,7 @@ None
 ## Retest
 This role is tested by serverspec, then its test codes are included in repository. Users can retest this role by using the test codes. To retest this role, follow the steps described below.
 
-1. Prepare targets (Here, target ip are X.X.X.X)
+1. Prepare targets (Here, target ip is X.X.X.X)
 2. Install serverspec in local machine
 3. Modify spec/inventory.yml
 ```
