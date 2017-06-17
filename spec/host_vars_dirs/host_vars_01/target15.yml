@@ -1,0 +1,8 @@
+openstack_mariadb:
+  listen_addr: 192.168.1.115
+  db_root_pass: p@ssw0rd
+
+openstack_keystone_database:
+  db_root_pass: p@ssw0rd
+  db_keystone_pass: p@ssw0rd
+

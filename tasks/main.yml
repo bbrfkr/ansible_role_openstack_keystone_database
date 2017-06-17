@@ -1,0 +1,27 @@
+---
+- name: install MySQL-python to use mysql module
+  yum:
+    name: MySQL-python
+    state: installed
+  become: yes
+
+- name: setting db 'keystone'
+  mysql_db:
+    name: keystone
+    login_user: root
+    login_password: "{{ openstack_keystone_database.db_root_pass }}"
+    state: present
+
+- name: setting db user 'keystone'
+  mysql_user:
+    name: keystone
+    host: "{{ item }}"
+    password: "{{ openstack_keystone_database.db_keystone_pass }}"
+    priv: keystone.*:ALL
+    login_user: root
+    login_password: "{{ openstack_keystone_database.db_root_pass }}"
+    state: present
+  with_items:
+    - localhost
+    - "%"
+

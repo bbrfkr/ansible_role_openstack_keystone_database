@@ -1,0 +1,7 @@
+spec/inventory
+spec/site.retry
+spec/host_vars
+spec/roles/*
+!spec/roles/openstack_keystone_database
+spec/roles/openstack_keystone_database/*
+!**/.gitkeep
